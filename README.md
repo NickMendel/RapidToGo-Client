@@ -1,4 +1,4 @@
-# rapidtogo-client2
+# rapidtogo-client
 
 ## Project setup
 ```

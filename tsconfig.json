@@ -1,11 +1,19 @@
 {
   "files": [],
+  "compilerOptions": {
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "jsx": "preserve"
+  },
+  "include": [],
   "references": [
-     {
-        "path": "./tsconfig.node.json"
-     },
-     {
-        "path": "./tsconfig.app.json"
-     }
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
   ]
 }

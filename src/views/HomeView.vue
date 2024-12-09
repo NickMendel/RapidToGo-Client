@@ -49,6 +49,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import axios from 'axios';
+import kc from '@/composables/auth/kc';
 
 const citySearch = ref<string>('');
 const city = ref<string>('Berlin');
@@ -124,8 +126,6 @@ const searchCity = () => {
 const changeCity = () => {
     city.value = '';
 }
-
-
 
 </script>
 

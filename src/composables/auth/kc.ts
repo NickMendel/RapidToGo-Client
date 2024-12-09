@@ -14,11 +14,14 @@ const kcInitOptions = {
 
 const kc = new Keycloak(kcConfig);
 
+let token: string | undefined = '';
+
 try {
   const authenticated = await kc.init(kcInitOptions);
 
   if (authenticated) {
     console.log('Authenticated');
+    token = kc.token;
   } else {
     console.log('Not authenticated');
   }
@@ -27,9 +30,13 @@ try {
 }
 
 kc.onTokenExpired = () => {
-  kc.updateToken(30).catch(() => {
-    kc.logout();
-  });
+  kc.updateToken(30)
+    .then(() => {
+      token = kc.token;
+    })
+    .catch(() => {
+      kc.logout();
+    });
 };
 
 const login = async () => {
@@ -60,4 +67,8 @@ const updateToken = () => {
   }
 };
 
-export default { kc, updateToken, login, logout };
+const getToken = () => {
+  return token;
+};
+
+export default { kc, updateToken, login, logout, getToken };

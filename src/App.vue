@@ -12,10 +12,12 @@
       <!-- Globale Komponenten -->
       <Toast position="top-right" group="tr" />
     </div>
+    <VueQueryDevtools />
   </div>
 </template>
 
 <script setup lang="ts">
+import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
 import { ref } from 'vue';
 
 const isLoading = ref(false);

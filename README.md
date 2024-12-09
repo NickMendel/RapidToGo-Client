@@ -2,7 +2,7 @@
 
 ## 0. Project setup & Requirements
 
-### Tools reuired
+### Tools required
 
 - Node.js
 - NPM
@@ -126,3 +126,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - View All Addresses
 - View All Users
 - View All Personal Data
+
+## 2. Project Plan
+
+[Project Plan](PROJECTPLAN.md)

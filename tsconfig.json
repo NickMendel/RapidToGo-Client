@@ -5,7 +5,10 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "target": "ESNext",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [],
   "references": [
